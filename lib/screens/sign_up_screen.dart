@@ -70,19 +70,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight
-                          .bold, // You can customize the error message style
+                          .bold, 
                     ),
                   ),
                 ),
-                // Sign-up button
                 signInSignUpButton(context, false, () {
                   if (_passwordTextController.text.length < 6) {
-                    // Password is too short, show error message
                     setState(() {
                       showPasswordError = true;
                     });
                   } else {
-                    // Password is valid, attempt to create the account
                     FirebaseAuth.instance
                         .createUserWithEmailAndPassword(
                       email: _emailTextController.text,

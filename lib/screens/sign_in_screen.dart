@@ -15,12 +15,11 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
-
-  // Define an error message widget
+  
   Text _errorMessage = Text(
     "",
     style: TextStyle(
-      color: Colors.red, // Customize the color
+      color: Colors.red, 
     ),
   );
 
@@ -54,7 +53,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 logoWidget("assets/images/Warhammer-logo.png"),
                 SizedBox(height: 30),
                 reusableTextField(
-                  "Enter Username",
+                  "Enter Email",
                   Icons.person_outline,
                   false,
                   _emailTextController,
@@ -78,7 +77,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       MaterialPageRoute(builder: (context) => HomeScreen()),
                     );
                   } catch (error) {
-                    // Set the error message here
+                    
                     setState(() {
                       _errorMessage = Text(
                         "Wrong email or password. Please try again.",
@@ -92,7 +91,6 @@ class _SignInScreenState extends State<SignInScreen> {
                   }
                 }),
                 signUpOption(),
-                // Display the error message
                 _errorMessage,
               ],
             ),

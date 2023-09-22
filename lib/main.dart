@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'My App', // Change this to your app's title
+      title: 'Flutter v1,
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Customize your theme as needed
+        primarySwatch: Colors.blue,
       ),
       home: const SignInScreen(),
     );
